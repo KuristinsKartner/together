@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="conta">
+    <div class="place">
+
+        <div class="author">
+            <input class="in-author" type="text" placeholder="Введите автора" name="author" />
+            
+        </div>
+        <div class="date">
+            <input class="in-dmy in-dmy-1" type="text" placeholder="день"/>
+            <input class="in-dmy in-dmy-1" type="text" placeholder="месяц"/>
+            <input class="in-dmy in-dmy-1" type="text" placeholder="год" />
+        </div>
+            
+        <div class="event">
+            <input class ="in-event" type="text" placeholder="Введите событие" name="event"/>
+        </div>
+        <div class="topic"><input class ="in-topic" type="text" placeholder="Введите тему" name="topic"/></div>
+        <div class="folderlocation">
+            <div class="folder">
+                <input type="text" class="in-text_loc in-folder" placeholder="Номер папки"  required name="folder"/>
+                
+            </div>
+            <div class="location">
+                <input type="text" class="in-text_loc in-location" placeholder="Местоположение" required name="place"/>
+                
+            </div>
+        </div>
+        <div class="public">
+            <input type="checkbox" class="in-public"/><label class="l-public" name="public">Не публичный документ</label> 
+        </div>
+    </div>
+    <div class="picture">
+        <div class="pic1" name="pic1"></div>
+        <div class="pic2" name="pic2"></div>
+        <div class="pic3" name="pic3"></div>
+    </div>
+    <div class="comments" >
+        <textarea class="text_comm" placeholder="Введите комментарий" rows="3"></textarea>
+    </div>
+    <div class="btn">
+        <input type="button" class="btn-btn" value="Сохранить" />
+    </div>
+</div>
