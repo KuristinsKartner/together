@@ -7,20 +7,44 @@ body {
     background-color: #c7c7ff;
     height: 100%;
 }
-.container {
+
+header {
+    /*height: 25px;
+    background: white;
+    position: fixed; 
+    left: 0;
+    top: 0; 
+    padding-left: 10px;
     width: 100%;
+    border: 1px solid #333;
+    */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0 12px 0 22px;
+    min-height: 64px;
+    /*min-width: 960px;*/
+    box-sizing: border-box;
+    background: white;
+}
+.container {
+    max-width: 100%;
+    padding:0px;
     height: 100%;
     text-align: center;
     vertical-align: middle;
     display: flex;
     flex-direction: column;
-
 }
 .place {
     align-content: center;
     justify-content: center;
 }
-.author, .comments, .date, .event, .topic, .locationfolder, .location, .folder, .public, .picture {
+.author, .comments, .date, .event, .topic, .locationfolder, .location, .folder, .public, .picture, .plus_event, .plus_topic {
     margin: 1%;
 }
 .in-dmy {
@@ -38,7 +62,7 @@ body {
     max-width: 15%;
 }
 
-.in-location, .in-text, .in-folder, .in-event, .in-topic, .in-author, .in-public {
+.in-location, .in-text, .in-folder, .in-event, .in-topic, .in-author, .in-public, .in-plus_event, .in-plus_topic {
     min-width: 50%;
     max-width: 70%;
     border: 1px solid transparent;
@@ -107,32 +131,40 @@ body {
     border-radius: 40px;
         */
     margin: 10px;
-    height: 55px;
+    min-height: 80px;
+    max-height: 120px;
     border-radius: 40px;
     border: 1px solid #333;
     width: calc(33% - 24px);
     display: inline-block;
 }
-
+span {
+    display: block;
+    text-align: center;
+        width: 100px;
+    height: 100%;
+    margin: 0 auto;
+}
 .text_comm {
     min-width: 50%;
     max-width: 70%;
-    padding: 6px 12px;
+    max-height:300px;
+    padding: 6px 12px 6px 6px;
     font-size: 17px;
     border-radius: 6px;
-
+    margin:20px;
 }
 input:focus, textarea:focus {
     border: 1px solid #00aefa;
     background-color: #fff;
     box-shadow: 1px 1px 1px 0 #c0c0c0;
 }
-input:hover, textarea:hover {
+input:hover, textarea:hover, .pic1:hover, .pic2:hover, .pic3:hover {
     border-color: #00aefa;
     background: #e9e9ff;
 }
 .btn-btn {
-    min-width: 50%;
+    min-width: 100%;
     max-width: 100%;
     padding: 5px;
     font-size: 17px;
@@ -144,3 +176,9 @@ input:hover, textarea:hover {
     .btn-btn:hover {
         background-color: #e9e9ff;
     }
+.footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    width: 100%;
+}
