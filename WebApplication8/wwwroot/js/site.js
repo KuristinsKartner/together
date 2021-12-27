@@ -1,5 +1,7 @@
 ﻿document.querySelector(".pic1").onclick = function () {
-    alert("Вы добавили изображение 1");
+
+    $('#heh').trigger('click');
+    //alert("Вы добавили изображение 1");
 }
 document.querySelector(".pic2").onclick = function () {
     alert("Вы добавили изображение 2");
@@ -10,3 +12,5 @@ document.querySelector(".pic3").onclick = function () {
 document.querySelector(".btn-btn").onclick = function () {
     alert("Вы сохранили");
 }
+var seltheme = $('.option option:selected').text();
+

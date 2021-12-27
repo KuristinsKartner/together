@@ -27,7 +27,7 @@ namespace WebApplication8
         public void ConfigureServices(IServiceCollection services)
         {
             string connectString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<UserContext>(options => options.UseSqlServer(connectString));
+            services.AddDbContext<NoteContext>(options => options.UseSqlServer(connectString));
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login"));

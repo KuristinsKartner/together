@@ -23,13 +23,13 @@ namespace WebApplication8.Models
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=users; Trusted_Connection = true;"); 
         }
         // помотреть, что здесь твориться
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    /*    protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
             OnModelCreatingPartial(modelBuilder);
         }
-
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    */
+    //    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
