@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 using WebApplication8.Models;
 namespace WebApplication8.Pages
 {
@@ -31,20 +32,6 @@ namespace WebApplication8.Pages
             };
         }
         
-        /*
-        public IndexModel()
-        {            
-            types = new List<MyType>()
-            {
-                new MyType{MyName="Фотография"},
-                new MyType{MyName="Открытка"},
-                new MyType{MyName="Письмо"},
-                new MyType{MyName="Проповедь"},
-                new MyType{MyName="Записки технические"},
-                new MyType{MyName="Записки богословские"},
-                new MyType{MyName="Записки бытовые, документы"}
-            };
-        }*/
 
         public void OnGet()
         {

@@ -5,68 +5,40 @@
     ViewData["Title"] = "Home page";
 }
 
-<header>
-    <div сlass="header">Hello</div>
-</header>
-<form method="post">
-    <div class="conta">
-        <div class="place">
 
-            <div class="author">
-                <input class="in-author" type="text" placeholder="Введите автора" name="author" />
-
-            </div>
-
-            <div class="date">
-                <input class="in-dmy in-dmy-1" type="text" placeholder="день" />
-                <input class="in-dmy in-dmy-1" type="text" placeholder="месяц" />
-                <input class="in-dmy in-dmy-1" type="text" placeholder="год" />
-            </div>
-
-            <div class="event">
-                <input class="in-event" type="text" placeholder="Введите событие" name="event" />
-            </div>
-            <div class="plus_event">
-                <input class="in-plus_event" type="text" placeholder="Введите доп. событие" name="plus-event" />
-            </div>
-            <div class="topic"><input class="in-topic" type="text" placeholder="Введите тему" name="topic" /></div>
-            <div class="plus_topic"><input class="in-plus_topic" type="text" placeholder="Введите доп. тему" name="plus-topic" /></div>
-            <div class="folderlocation">
-                <div class="folder">
-                    <input type="text" class="in-text_loc in-folder" placeholder="Номер папки" required name="folder" />
-
-                </div>
-                <div class="location">
-                    <input type="text" class="in-text_loc in-location" placeholder="Местоположение" required name="place" />
-
-                </div>
-            </div>
-
-            <select class="option">
-                @foreach (MyType type in Model.MyTypes)
-                 {
-                     <option>@type.MyName</option>
-                 }
-            </select>
-
-            <div class="public">
-                <input type="checkbox" class="in-public" /><label class="l-public" name="public">Не публичный документ</label>
-            </div>
+<form method="post" class="decor">
+    <div class="form-inner">
+        <h3>Заполнение формы</h3>
+        <input type="text" placeholder="Автор" required name="author">
+        <div class="date">
+            <input class="in-dmy" type="text" placeholder="день" />
+            <input class="in-dmy" type="text" placeholder="месяц" />
+            <input class="in-dmy" type="text" placeholder="год" />
         </div>
-
+        <input class="in-event" type="text" required placeholder="Событие" name="event" />
+        <input class="in-plus_event" type="text" placeholder="Доп. событие" name="plus-event" />
+        <input class="in-topic" type="text" required placeholder="Тема" name="topic" />
+        <input class="in-plus_topic" type="text" placeholder="Доп. тема" name="plus-topic" />
+        <input type="text" class="in-text_loc in-folder" placeholder="Номер папки" required name="folder" />
+        <input type="text" class="in-text_loc in-location" placeholder="Местоположение" required name="place" />
+        @*не могу найти ошибку*@
+        @*<select class="option">
+            @foreach (MyType type in Model.MyTypes)
+            {
+                <option>@type.MyName</option>
+            }
+        </select>*@
+        <select class="option">
+            <option>Hi</option>
+        </select>
+        <input type="checkbox" id="custom-checkbox">
+        <label for="custom-checkbox">Публичный документ</label>
         <div class="picture">
-            <div class="pic1" name="pic1"><input type="file"/></div>
+            <div class="pic1" name="pic1"><input type="file" /></div>
             <div class="pic2" name="pic2"><input type="file" /></div>
             <div class="pic3" name="pic3"><input type="file" /></div>
         </div>
-        <div class="comments">
-            <textarea class="text_comm" placeholder="Введите комментарий" rows="3"></textarea>
-        </div>
-
-    </div>
-
-   
-    <div class="footer">
-        <input type="submit" class="btn-btn" value="Сохранить" asp-page-handler="Save" />
+        <textarea placeholder="Комментарий" rows="3"></textarea>
+        <input type="submit" class ="my_btn" value="Отправить" asp-page-handler="Save">
     </div>
 </form>

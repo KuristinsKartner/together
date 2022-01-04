@@ -12,5 +12,3 @@ document.querySelector(".pic3").onclick = function () {
 document.querySelector(".btn-btn").onclick = function () {
     alert("Вы сохранили");
 }
-var seltheme = $('.option option:selected').text();
-
