@@ -146,7 +146,7 @@ body {
     text-align: center;
 }
 
-.input__file {
+.input__file1, .input__file2, .input__file3 {
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -207,7 +207,7 @@ body {
     margin: 0 auto;
 }
 
-#drop-area {
+#drop-area1, #drop-area2, #drop-area3 {
     border: 2px dashed #ccc;
     border-radius: 20px;
     width: calc(30% - 24px);
@@ -215,8 +215,8 @@ body {
     padding: 20px;
 }
 
-    #drop-area.highlight {
-        background-color: #eee;
-        border-color: purple;
-    }
+#drop-area1.highlight, #drop-area2.highlight, #drop-area3.highlight {
+    background-color: #eee;
+    border-color: purple;
+}
 
