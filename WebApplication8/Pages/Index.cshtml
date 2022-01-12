@@ -8,51 +8,73 @@
 
 <form method="post" class="decor">
     <div class="form-inner">
-        <h3>Заполнение формы</h3>
-        <input type="text" placeholder="Автор" required name="author" class="o_ver_input">
-        <div class="date">
-            <input class="in-dmy o_ver_input" type="text" placeholder="день" />
-            <input class="in-dmy o_ver_input" type="text" placeholder="месяц" />
-            <input class="in-dmy o_ver_input" type="text" placeholder="год" />
-        </div>
-        <input class="in-event o_ver_input" type="text" required placeholder="Событие" name="event" />
-        <input class="in-plus_event o_ver_input" type="text" placeholder="Доп. событие" name="plus-event" />
-        <input class="in-topic o_ver_input" type="text" required placeholder="Тема" name="topic" />
-        <input class="in-plus_topic o_ver_input" type="text" placeholder="Доп. тема" name="plus-topic" />
-        <input type="text" class="in-text_loc in-folder o_ver_input" placeholder="Номер папки" required name="folder" />
-        <input type="text" class="in-text_loc in-location o_ver_input" placeholder="Местоположение" required name="place" />
-        @*не могу найти ошибку*@
-        @*<select class="option">
-            @foreach (MyType type in Model.MyTypes)
-            {
-                <option>@type.MyName</option>
-            }
-        </select>*@
-        <div class="pic_plus_another">
-            <select class="option">
-                <option>Hi</option>
-            </select>
-            <input type="checkbox" id="custom-checkbox" class="o_ver_input">
-            <label for="custom-checkbox">Публичный документ</label>
-        </div>
 
+        <h3>Заполнение формы</h3>
         <div class="pic_plus_another">
-            <div class="pic1" name="pic1"><input type="file" /></div>
-            <div class="pic2" name="pic2"><input type="file" /></div>
-            <div class="pic3" name="pic3"><input type="file" /></div>
-        </div>
-        <textarea placeholder="Комментарий" rows="3"></textarea>
-        <div id="drop-area">
-            <div class="input__wrapper">
-                <input name="file" type="file" id="input__file" class="input input__file">
-                <label for="input__file" class="input__file-button">
-                    <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./css/download.png" alt="Выбрать файл" width="25"></span>
-                    <span class="input__file-button-text" id="in__text"><a class="click_download">Загрузка файла</a></span>
-                </label>
+
+            <div id="drop-area" class="pic1">
+                <div class="input__wrapper">
+                    <input name="file" type="file" id="input__file" class="input input__file">
+                    <label for="input__file" class="input__file-button">
+                        <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./css/download.png" alt="Выбрать файл" width="25"></span>
+                        <span class="input__file-button-text" id="in__text">Загрузка файла</span>
+                    </label>
+                </div>
+            </div>
+            <div id="drop-area" class="pic1">
+                <div class="input__wrapper">
+                    <input name="file" type="file" id="input__file" class="input input__file">
+                    <label for="input__file" class="input__file-button">
+                        <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./css/download.png" alt="Выбрать файл" width="25"></span>
+                        <span class="input__file-button-text" id="in__text">Загрузка файла</span>
+                    </label>
+                </div>
+            </div>
+            <div id="drop-area" class="pic1">
+                <div class="input__wrapper">
+                    <input name="file" type="file" id="input__file" class="input input__file">
+                    <label for="input__file" class="input__file-button">
+                        <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./css/download.png" alt="Выбрать файл" width="25"></span>
+                        <span class="input__file-button-text" id="in__text">Загрузка файла</span>
+                    </label>
+                </div>
             </div>
         </div>
+        <div class="pic_plus_another">
+            <label class="pic1">Сканированная копия</label>
+            <label class="pic1">Форматированный текст</label>
+            <label class="pic1">Сверстанный текст</label>
+        </div>
+            <input type="text" placeholder="Автор" required name="author" class="o_ver_input">
+            <div class="date">
+                <input class="in-dmy o_ver_input" type="text" placeholder="день" />
+                <input class="in-dmy o_ver_input" type="text" placeholder="месяц" />
+                <input class="in-dmy o_ver_input" type="text" placeholder="год" />
+            </div>
+            <input class="in-event o_ver_input" type="text" required placeholder="Событие" name="event" />
+            <input class="in-plus_event o_ver_input" type="text" placeholder="Доп. событие" name="plus-event" />
+            <input class="in-topic o_ver_input" type="text" required placeholder="Тема" name="topic" />
+            <input class="in-plus_topic o_ver_input" type="text" placeholder="Доп. тема" name="plus-topic" />
+            <input type="text" class="in-text_loc in-folder o_ver_input" placeholder="Номер папки" required name="folder" />
+            <input type="text" class="in-text_loc in-location o_ver_input" placeholder="Местоположение" required name="place" />
+            @*не могу найти ошибку*@
+            @*<select class="option">
+                @foreach (MyType type in Model.MyTypes)
+                {
+                    <option>@type.MyName</option>
+                }
+            </select>*@
+            <div class="pic_plus_another">
+                <select class="option">
+                    <option>Hi</option>
+                </select>
+                <input type="checkbox" id="custom-checkbox" class="o_ver_input">
+                <label for="custom-checkbox">Публичный документ</label>
+            </div>
 
-        <input type="submit" class="my_btn" value="Отправить" asp-page-handler="Save">
-    </div>
+            <textarea placeholder="Комментарий" rows="3"></textarea>
+
+            <input type="submit" class="my_btn" value="Отправить" asp-page-handler="Save">
+        </div>
 
 </form>

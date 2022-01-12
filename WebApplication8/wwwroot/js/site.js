@@ -2,8 +2,12 @@
 let inputs = document.querySelectorAll('.input__file');
 Array.prototype.forEach.call(inputs, function (input) {
     let label = input.nextElementSibling;
-    
-    document.getElementById('input__file').innerText = this.files[0].name;
+    console.log('ok1')
+    document.getElementsByTagName('input')[0].onchange = function () {
+        if (this.files[0]) // если выбрали файл
+            label.querySelector('.input__file-button-text').innerText = this.files[0].name;
+    };
+
 });
 
 //часть 2
