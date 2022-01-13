@@ -3,6 +3,8 @@
 @using WebApplication8.Models
 @{
     ViewData["Title"] = "Home page";
+    
+    
 }
 <form method="post" class="decor">
     <div class="form-inner">
@@ -43,18 +45,18 @@
             <label class="pic1">Форматированный текст</label>
             <label class="pic1">Сверстанный текст</label>
         </div>
-            <input type="text" placeholder="Автор" required name="author" class="o_ver_input">
+            <input type="text" placeholder="Автор" name="author" class="o_ver_input">
             <div class="date">
                 <input class="in-dmy o_ver_input" type="text" placeholder="день" />
                 <input class="in-dmy o_ver_input" type="text" placeholder="месяц" />
                 <input class="in-dmy o_ver_input" type="text" placeholder="год" />
             </div>
-            <input class="in-event o_ver_input" type="text" required placeholder="Событие" name="event" />
+            <input class="in-event o_ver_input" type="text" placeholder="Событие" name="event" />
             <input class="in-plus_event o_ver_input" type="text" placeholder="Доп. событие" name="plus-event" />
-            <input class="in-topic o_ver_input" type="text" required placeholder="Тема" name="topic" />
+            <input class="in-topic o_ver_input" type="text" placeholder="Тема" name="topic" />
             <input class="in-plus_topic o_ver_input" type="text" placeholder="Доп. тема" name="plus-topic" />
-            <input type="text" class="in-text_loc in-folder o_ver_input" placeholder="Номер папки" required name="folder" />
-            <input type="text" class="in-text_loc in-location o_ver_input" placeholder="Местоположение" required name="place" />
+            <input type="text" class="in-text_loc in-folder o_ver_input" required placeholder="Номер папки" required name="folder" />
+            <input type="text" class="in-text_loc in-location o_ver_input" required placeholder="Местоположение" required name="place" />
             @*не могу найти ошибку*@
             @*<select class="option">
                 @foreach (MyType type in Model.MyTypes)

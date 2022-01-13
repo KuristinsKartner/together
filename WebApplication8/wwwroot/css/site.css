@@ -182,10 +182,10 @@ body {
     display: inline;
 }
 
-    .input__file-button-text:hover {
-        border-bottom: 2px dashed #707981;
-        padding-bottom: 3px;
-    }
+.input__file-button-text:hover {
+    border-bottom: 2px dashed #707981;
+    padding-bottom: 3px;
+}
 
 .input__file-button {
     width: 100%;
