@@ -6,12 +6,12 @@ for details on configuring this project to bundle and minify static web assets. 
 
 body {
     background-color: #c7c7ff;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .decor {
     position: relative;
-    margin: 50px auto 0;
+    margin: 50px auto 0 0;
     background: white;
     border-radius: 30px;
 }
@@ -130,7 +130,7 @@ body {
     text-align: center;
 }
 
-.pic1, .pic2, .pic3 {
+.pic1 {
     margin: 10px;
     border-radius: 40px;
     width: calc(30% - 24px);
@@ -146,7 +146,7 @@ body {
     text-align: center;
 }
 
-.input__file {
+.input__file1, .input__file2, .input__file3 {
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -176,7 +176,16 @@ body {
 .input__file-button-text {
     line-height: 1;
     margin-top: 1px;
+    text-decoration: none;
+    border: transparent;
+    padding-bottom: 3px;
+    display: inline;
 }
+
+    .input__file-button-text:hover {
+        border-bottom: 2px dashed #707981;
+        padding-bottom: 3px;
+    }
 
 .input__file-button {
     width: 100%;
@@ -198,23 +207,16 @@ body {
     margin: 0 auto;
 }
 
-#drop-area {
+#drop-area1, #drop-area2, #drop-area3 {
     border: 2px dashed #ccc;
     border-radius: 20px;
-    width: 480px;
-    margin: 50px auto;
+    width: calc(30% - 24px);
+    margin: 50px auto 0 0;
     padding: 20px;
 }
 
-    #drop-area.highlight {
-        background-color: #eee;
-        border-color: purple;
-    }
-
-.click_download {
-    text-decoration: none;
+#drop-area1.highlight, #drop-area2.highlight, #drop-area3.highlight {
+    background-color: #eee;
+    border-color: purple;
 }
 
-    .click_download:hover {
-        text-decoration: underline;
-    }
