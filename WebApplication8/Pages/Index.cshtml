@@ -1,61 +1,60 @@
-﻿@page
+﻿@page "{handler?}"
 @model IndexModel
+@using WebApplication8.Models
 @{
     ViewData["Title"] = "Home page";
 }
 
-<header>
-    <div сlass="header">Hello</div>
-</header>
-<div class="conta">
-    <div class="place">
 
-        <div class="author">
-            <input class="in-author" type="text" placeholder="Введите автора" name="author" />
-
-        </div>
+<form method="post" class="decor">
+    <div class="form-inner">
+        <h3>Заполнение формы</h3>
+        <input type="text" placeholder="Автор" required name="author" class="o_ver_input">
         <div class="date">
-            <input class="in-dmy in-dmy-1" type="text" placeholder="день" />
-            <input class="in-dmy in-dmy-1" type="text" placeholder="месяц" />
-            <input class="in-dmy in-dmy-1" type="text" placeholder="год" />
+            <input class="in-dmy o_ver_input" type="text" placeholder="день" />
+            <input class="in-dmy o_ver_input" type="text" placeholder="месяц" />
+            <input class="in-dmy o_ver_input" type="text" placeholder="год" />
+        </div>
+        <p>
+            <input class="in-event o_ver_input" type="text" required placeholder="Событие" name="event" />
+        </p>
+        <input class="in-plus_event o_ver_input" type="text" placeholder="Доп. событие" name="plus-event" />
+        <input class="in-topic o_ver_input" type="text" required placeholder="Тема" name="topic" />
+        <input class="in-plus_topic o_ver_input" type="text" placeholder="Доп. тема" name="plus-topic" />
+        <input type="text" class="in-text_loc in-folder o_ver_input" placeholder="Номер папки" required name="folder" />
+        <input type="text" class="in-text_loc in-location o_ver_input" placeholder="Местоположение" required name="place" />
+        @*не могу найти ошибку*@
+        @*<select class="option">
+                @foreach (MyType type in Model.MyTypes)
+                {
+                    <option>@type.MyName</option>
+                }
+            </select>*@
+        <div class="pic_plus_another">
+            <select class="option">
+                <option>Hi</option>
+            </select>
+            <input type="checkbox" id="custom-checkbox" class="o_ver_input">
+            <label for="custom-checkbox">Публичный документ</label>
         </div>
 
-        <div class="event">
-            <input class="in-event" type="text" placeholder="Введите событие" name="event" />
+        <div class="pic_plus_another">
+            <div class="pic1" name="pic1"><input type="file" /></div>
+            <div class="pic2" name="pic2"><input type="file" /></div>
+            <div class="pic3" name="pic3"><input type="file" /></div>
         </div>
-        <div class="plus_event">
-            <input class="in-plus_event" type="text" placeholder="Введите доп. событие" name="plus-event" />
-        </div>
-        <div class="topic">
-            <input class="in-topic" type="text" placeholder="Введите тему" name="topic" />
-        </div>
-        <div class="plus_topic">
-            <input class="in-plus_topic" type="text" placeholder="Введите доп. тему" name="plus-topic" />
-        </div>
-        <div class="folderlocation">
-            <div class="folder">
-                <input type="text" class="in-text_loc in-folder" placeholder="Номер папки" required name="folder" />
-
+        <textarea placeholder="Комментарий" rows="3"></textarea>
+        <div id="drop-area">
+            <div class="input__wrapper">
+                <input name="file" type="file" id="input__file" class="input input__file">
+                <label for="input__file" class="input__file-button">
+                    <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./css/download.png" alt="Выбрать файл" width="25"></span>
+                    <span class="input__file-button-text" id="in__text"><a class="click_download">Загрузка файла</a></span>
+                </label>
             </div>
-            <div class="location">
-                <input type="text" class="in-text_loc in-location" placeholder="Местоположение" required name="place" />
+        </div>
 
-            </div>
-        </div>
-        <div class="public">
-            <input type="checkbox" class="in-public" /><label class="l-public" name="public">Не публичный документ</label>
-        </div>
+        <input type="submit" class="my_btn" value="Отправить" asp-page-handler="Save">
     </div>
-    <div class="picture">
-        <div class="pic1" name="pic1"><span>Добавьте изображение</span></div>
-        <div class="pic2" name="pic2"><span>Добавьте изображение</span></div>
-        <div class="pic3" name="pic3"><span>Добавьте изображение</span></div>
-    </div>
-    <div class="comments" >
-        <textarea class="text_comm" placeholder="Введите комментарий" rows="3"></textarea>
-    </div>
-    
-</div>
-<div class="footer">
-    <input type="button" class="btn-btn" value="Сохранить" />
-</div>
+
+</form>

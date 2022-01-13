@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore;
 using WebApplication8.Models;
 namespace WebApplication8
 {
@@ -26,12 +26,12 @@ namespace WebApplication8
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<NoteContext>(options => options.UseSqlServer(connectString));
+            /* string connectString = Configuration.GetConnectionString("DefaultConnection");
+             services.AddDbContext<DBConnection>(options => options.UseSqlServer(connectString));
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options => options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login"));
-
+             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                 .AddCookie(options => options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login"));
+            */
             services.AddRazorPages();
         }
 
